@@ -1,0 +1,17 @@
+{
+  "domain": "coffee_machine_monitor",
+  "name": "Coffee Machine Monitor",
+  "codeowners": [
+    "@sambtc94"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/sambtc94/ha_coffee_machine_monitor",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/sambtc94/ha_coffee_machine_monitor/issues",
+  "loggers": [
+    "custom_components.coffee_machine_monitor"
+  ],
+  "requirements": [],
+  "version": "1.0.0"
+}
