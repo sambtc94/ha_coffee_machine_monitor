@@ -1,0 +1,95 @@
+{
+  "title": "Coffee Machine Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Coffee Machine Monitor",
+        "description": "Select the existing power sensor that tracks your coffee machine.",
+        "data": {
+          "source_entity": "Power sensor",
+          "name": "Coffee machine name",
+          "diagnostic_entities": "Enable diagnostic entities"
+        }
+      }
+    },
+    "error": {
+      "unsupported_unit": "The selected sensor must use W or kW.",
+      "already_configured": "This power sensor is already configured."
+    },
+    "abort": {
+      "already_configured": "This power sensor is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Detection settings",
+        "description": "Adjust detection thresholds and timings.",
+        "data": {
+          "inactive_max_power": "Inactive max power (W)",
+          "active_min_power": "Active min power (W)",
+          "grinder_min_power": "Grinder min power (W)",
+          "grinder_max_power": "Grinder max power (W)",
+          "steam_min_power": "Steam min power (W)",
+          "steam_max_power": "Steam max power (W)",
+          "extraction_min_power": "Extraction min power (W)",
+          "heater_min_power": "Heater min power (W)",
+          "maximum_expected_power": "Maximum expected power (W)",
+          "startup_min_duration": "Startup min duration (s)",
+          "grind_min_duration": "Grind min duration (s)",
+          "extraction_min_duration": "Extraction min duration (s)",
+          "steam_heat_min_duration": "Steam heat min duration (s)",
+          "steam_min_duration": "Steam min duration (s)",
+          "rinse_max_duration": "Rinse max duration (s)",
+          "activity_end_delay": "Activity end delay (s)",
+          "low_power_gap_tolerance": "Low power gap tolerance (s)",
+          "session_end_delay": "Session end delay (s)",
+          "unknown_timeout": "Unknown timeout (s)",
+          "minimum_valid_session_duration": "Minimum valid session duration (s)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "power": {"name": "Power"},
+      "state": {
+        "name": "State",
+        "state": {
+          "off": "Off",
+          "starting": "Starting",
+          "heating": "Heating",
+          "ready": "Ready",
+          "grinding": "Grinding",
+          "extracting": "Extracting",
+          "steam_heating": "Steam heating",
+          "steaming": "Steaming",
+          "rinsing": "Rinsing",
+          "cleaning": "Cleaning",
+          "finishing": "Finishing",
+          "unknown": "Unknown"
+        }
+      },
+      "coffees_today": {"name": "Coffees today"},
+      "total_coffees": {"name": "Total coffees"},
+      "milk_drinks_today": {"name": "Milk drinks today"},
+      "last_coffee_time": {"name": "Last coffee time"},
+      "last_activity": {"name": "Last activity"},
+      "current_activity_duration": {"name": "Current activity duration"},
+      "last_coffee_duration": {"name": "Last coffee duration"},
+      "last_steam_duration": {"name": "Last steam duration"},
+      "current_session_energy": {"name": "Current session energy"},
+      "last_session_energy": {"name": "Last session energy"},
+      "last_drink_type": {"name": "Last drink type"},
+      "detection_confidence": {"name": "Detection confidence"},
+      "power_pattern": {"name": "Power pattern"}
+    },
+    "binary_sensor": {
+      "active": {"name": "Active"},
+      "making_coffee": {"name": "Making coffee"},
+      "extracting_coffee": {"name": "Extracting coffee"},
+      "steaming_milk": {"name": "Steaming milk"},
+      "machine_on": {"name": "Machine on"}
+    }
+  }
+}
