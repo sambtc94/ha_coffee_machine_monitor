@@ -56,7 +56,7 @@ class CoffeeMachineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             data_schema=vol.Schema(
                 {
                     vol.Required(CONF_SOURCE_ENTITY): selector.EntitySelector(
-                        selector.EntitySelectorConfig(domain="sensor")
+                        selector.EntitySelectorConfig(domain="sensor", device_class="power")
                     ),
                     vol.Required(CONF_NAME, default=DEFAULT_DEVICE_NAME): str,
                     vol.Required(
